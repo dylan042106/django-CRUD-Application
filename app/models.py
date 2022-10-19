@@ -33,13 +33,9 @@ def favorite_songs():
     return Song.objects.filter(favorite=True)
 
 
-def update_song(name, artist, album, genre, favorite):
+def update_artist(name, artist):
     selected_song = find_song_by_name(name)
-    selected_song.name = name
     selected_song.artist = artist
-    selected_song.album = album
-    selected_song.genre = genre
-    selected_song.favorite = favorite
     selected_song.save()
 
 
