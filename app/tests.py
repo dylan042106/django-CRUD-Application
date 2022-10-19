@@ -149,7 +149,7 @@ class TestSong(TestCase):
         self.assertEquals(len(models.all_songs()), 1)
 
     def test_update_artist(self):
-        song_1 = models.add_song("Without Me", "Halsey", "Manic", "Pop", True)
+        models.add_song("Without Me", "Halsey", "Manic", "Pop", True)
         models.update_artist("Without Me", "Halsey ft. Juice Wrld")
 
         self.assertEquals(
